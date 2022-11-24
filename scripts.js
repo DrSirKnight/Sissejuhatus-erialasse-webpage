@@ -10,20 +10,20 @@ function lisakohukesi(amount) {
 // Automaatsed upgradid
 // Kohukese vabrikud
 
-let vabrikuHind = 10;
-let vabrikud = 0;
+let vabrik = [10, 0, 1.15, 1]; // Hind, koguarv, hinnatõus, tootmis modifier
 
-function ostaVabrik() {
-    if (kohukesed >= vabrikuHind) {
-        kohukesed = kohukesed - vabrikuHind;
-        vabrikuHind = Math.round(vabrikuHind * 1.1);
-        vabrikud = vabrikud + 1;
-        document.getElementById("vabrikuKogus").innerHTML = vabrikud;
-        document.getElementById("vabrikuHind").innerHTML = vabrikuHind;
+
+function ostaUpgrade(upgrade) {
+    if (kohukesed >= upgrade[0]) {
+        kohukesed = kohukesed - upgrade[0];
+        upgrade[0] = Math.round(upgrade[0] * upgrade[2]);
+        upgrade[1] = upgrade[1] + 1;
+        document.getElementById("vabrikuKogus").innerHTML = upgrade[1];
+        document.getElementById("vabrikuHind").innerHTML = upgrade[0];
         document.getElementById("kohukesed").innerHTML = kohukesed;
     }
 }
 setInterval(function() {
-    kohukesed = kohukesed + vabrikud
+    kohukesed = kohukesed + vabrik[1]*vabrik[3]
     document.getElementById("kohukesed").innerHTML = kohukesed;
 }, 1000) // Iga 1000ms (1 sekund)
