@@ -2,16 +2,24 @@
 <html lang="">
   <head>
     <meta charset="utf-8">
-    <title>Veebileht</title>
+    <title>Kohukese Vajutaja</title>
     <script type="text/javascript" src="scripts.js"></script>
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
   </head>
   <body>
+    <!--
     <header>Veebileht</header>
     <main><p>Veebileht :)</p></main>
-    <footer><p>Veebileht</p></footer>
-    <img src="Pildid\Kohuke.png" width="200px" onclick="lisakohukesi(1)" class="clickable" id="kohuke"></img>
-    <p>Kohukesed: <span id="kohukesed">0</span></p>
-    <button onclick="ostaUpgrade(vabrik)">Kohukeste vabrik [Kokku: <span id="vabrikuKogus">0</span> Hind: <span id="vabrikuHind">25</span>]</button>
+    <footer><p>Veebileht</p></footer> 
+    -->
+    <div class="välimine">
+      <div class="pood">
+        <button onclick="ostaUpgrade(vabrik)">Kohukeste vabrik [Kokku: <span id="vabrikuKogus">0</span> Hind: <span id="vabrikuHind">25</span>]</button>
+      </div>
+      <div class="vajutaja">
+        <img src="Pildid\Kohuke.png" width="200px" onclick="lisakohukesi(1)" class="clickable" id="kohuke"></img>
+        <p>Kohukesed: <span id="kohukesed">0</span></p>
+      </div>
+    </div>
   </body>
 </html>

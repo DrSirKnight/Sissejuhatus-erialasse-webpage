@@ -1,3 +1,20 @@
 button, .clickable {
     cursor: pointer;
 }
+.pood {
+    width: 50%;
+    background-color: rgba(36, 36, 39, 0.345);
+}
+.vajutaja {
+    width: 50%;
+    text-align: center;
+    background-color: rgba(50, 49, 54, 0.345);
+}
+.välimine {
+    display: flex;
+    background-color: rgba(39, 40, 43, 0.137);
+    padding: 10px;
+}
+body {
+    background-color: rgb(68, 69, 73);
+}
