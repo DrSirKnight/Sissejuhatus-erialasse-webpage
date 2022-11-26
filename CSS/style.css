@@ -2,19 +2,44 @@ button, .clickable {
     cursor: pointer;
 }
 .pood {
-    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
     background-color: rgba(36, 36, 39, 0.345);
+    overflow: auto;
+    -ms-overflow-style: none; /* Edge */
+    scrollbar-width: none; /* Firefox */
+    padding: 10px;
+}
+.pood::-webkit-scrollbar{
+    display:none /* Chrome, Opera, jne */
+}
+.poenupp {
+    padding: 10px;
+    width: 30%;
+    margin: 10px;
+    background-color:rgb(108, 110, 119);
+    border: 0px;
+    height: 200px;
 }
 .vajutaja {
-    width: 50%;
+    width: 10%;
     text-align: center;
     background-color: rgba(50, 49, 54, 0.345);
+    margin-left: 10%;
+    margin-right: 10%;
 }
 .välimine {
     display: flex;
     background-color: rgba(39, 40, 43, 0.137);
     padding: 10px;
+    height: 100%;
+}
+.kohuke {
+    padding: 15px;
 }
 body {
     background-color: rgb(68, 69, 73);
 }
+
