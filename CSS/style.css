@@ -34,7 +34,7 @@ button, .clickable {
     display: flex;
     background-color: rgba(39, 40, 43, 0.137);
     padding: 10px;
-    height: 100%;
+    height: 500px;
 }
 .kohuke {
     padding: 15px;
