@@ -24,9 +24,9 @@ nav a{
     transform: translate(-50%,-50%);
 }
 .links ul li{
-    display:block;
+    display:inline-block;
     list-style: none;
-    margin: 4vh;
+    margin: 5vh;
 }
 .links ul li a{
     font-size: 7vh;
@@ -34,12 +34,12 @@ nav a{
     text-decoration: none;
 }
 .links ul li::after{
-    content: "";
+    content: " ";
     width: 0%;
     height: 0.6vh;
     background: rgb(209, 136, 136);
     display: block;
-    margin:auto;
+    margin: auto;
     transition: 0.3s;
 }
 .links ul li:hover::after{ 
