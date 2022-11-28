@@ -2,7 +2,7 @@ body{
     font-family: 'Alexandria', sans-serif;
     min-height: 100vh;
     width: 100%;
-    background-image:linear-gradient(rgba(80, 85, 85, 0.85),rgba(80,85,85,0.85)),url(../images/background1.jpeg);
+    background-image:linear-gradient(rgba(80, 85, 85, 0.85),rgba(80,85,85,0.85)),url(../Pildid/background1.jpeg);
     background-position: center;
     background-size: cover;
     position: relative;
