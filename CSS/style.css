@@ -6,7 +6,7 @@ body{                                                       /* Helepunane - #E98
     font-family: 'Alexandria', sans-serif;                    /* Punane - #E85A4F */
 }
 .text{
-    padding-top: 2%;
+    padding-top: 1%;
 }
 .text h1{
     padding-left: 6%;
@@ -22,17 +22,17 @@ body{                                                       /* Helepunane - #E98
 .text p{
     padding: 2% 6%;
     padding-bottom: 4%;
-    color: #605f5d;
+    
     font-size: 2.5vh;
     text-align: justify;
     line-height: 5vh;
 }
 .right{
-    padding-left: 6%;
     text-align: right;
     background-color: #D8C3A5;
+    color: #605f5d;
 }
 
-.right p{
-    color: #605f5d;
+.left {
+    color: #8E8D8A;
 }
