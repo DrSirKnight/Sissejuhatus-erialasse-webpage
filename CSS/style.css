@@ -16,23 +16,22 @@ body{                                                       /* Helepunane - #E98
     text-decoration-line: underline;
     text-decoration-thickness: 0.8vh;
     text-decoration-color: #E98074;
-    padding-top: 2%;
+    padding-top: 3%;
     
 }
 .text p{
     padding: 2% 6%;
-    padding-bottom: 4%;
-    color: #605f5d;
+    padding-bottom: 3%;
     font-size: 2.5vh;
     text-align: justify;
     line-height: 5vh;
+}
+.left{
+    color: #8E8D8A;
 }
 .right{
     padding-left: 6%;
     text-align: right;
     background-color: #D8C3A5;
-}
-
-.right p{
     color: #605f5d;
 }
