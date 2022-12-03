@@ -1,4 +1,42 @@
 body{
-    font-family: 'Alexandria', sans-serif;
-    background-color: rgba(80, 85, 85, 0.85);
+    background-color: #EAE7DC;
+}
+.topbar{
+    background-color: #D8C3A5;
+    background-size: 100% 100%;
+}
+nav{
+    padding: 2% 4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav a{
+    font-size: 3vh;
+}
+.navbar{
+    text-align: right;
+    position: relative;
+}
+.navbar ul li{
+    display:inline-block;
+    list-style: none;
+    margin-left: 3vh;
+}
+.navbar ul li a{
+    font-size: 2vh;
+    color: #E85A4F;
+    text-decoration: none;
+}
+.navbar ul li::after{
+    content: "";
+    width: 0%;
+    height: 0.3vh;
+    background: #E98074;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{ 
+    width: 100%;
 }

@@ -1,4 +1,28 @@
 *{
-    margin: 0;
-    padding: 0;
+    margin: 0;                                              /* Pmst valge - #EAE7DC */
+    padding: 0;                                                /* Beež - #D8C3A5 */
+}                                                            /* Hallikas - #8E8D8A */
+body{                                                       /* Helepunane - #E98074 */
+    font-family: 'Alexandria', sans-serif;                    /* Punane - #E85A4F */
+}
+.text{
+    padding: 2% 6%;
+}
+.text h1{
+    color: #E85A4F;
+    font-size: 4.5vh;
+    text-decoration-line: underline;
+    text-decoration-thickness: 0.8vh;
+    text-decoration-color: #E98074;
+}
+.text p{
+    padding: 2% 3%;
+    padding-bottom: 6%;
+    color: #8E8D8A;
+    font-size: 2.5vh;
+    text-align: justify;
+    line-height: 5vh;
+}
+.right{
+    text-align: right;
 }
