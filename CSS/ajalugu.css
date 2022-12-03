@@ -2,8 +2,11 @@ body{
     background-color: #EAE7DC;
 }
 .topbar{
-    background-color: #D8C3A5;
+    background-color: #E85A4F;
     background-size: 100% 100%;
+}
+.topbar a{
+    color: #EAE7DC;
 }
 nav{
     padding: 2% 4%;
@@ -25,7 +28,7 @@ nav a{
 }
 .navbar ul li a{
     font-size: 2vh;
-    color: #E85A4F;
+    color: #EAE7DC;
     text-decoration: none;
 }
 .navbar ul li::after{
