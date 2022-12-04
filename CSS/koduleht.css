@@ -44,7 +44,7 @@ nav a{
 .links ul li:hover::after{ 
     width: 100%;
 }
-.text {
+.headertext {
     margin-top: 30vh;
     color: azure;
     text-align: center;
