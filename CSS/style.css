@@ -1,49 +1,42 @@
-button, .clickable {
-    cursor: pointer;
+*{
+    margin: 0;                                              /* Pmst valge - #EAE7DC */
+    padding: 0;                                                /* Beež - #D8C3A5 */
+}                                                            /* Hallikas - #8E8D8A */
+body{                                                       /* Helepunane - #E98074 */
+    font-family: 'Alexandria', sans-serif;                    /* Punane - #E85A4F */
 }
-.pood {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 80%;
-    background-color: rgba(36, 36, 39, 0.345);
-    overflow: auto;
-    -ms-overflow-style: none; /* Edge */
-    scrollbar-width: none; /* Firefox */
-    padding: 10px;
+.text{
+    padding-top: 1%;
 }
-.pood::-webkit-scrollbar{
-    display:none /* Chrome, Opera, jne */
+.text h1{
+    padding-left: 6%;
+    padding-right: 6%;
+    color: #E85A4F;
+    font-size: 4.5vh;
+    text-decoration-line: underline;
+    text-decoration-thickness: 0.8vh;
+    text-decoration-color: #E98074;
+    padding-top: 2%;
+    
 }
-.poenupp {
-    padding: 10px;
-    width: 30%;
-    margin: 10px;
-    background-color:rgb(108, 110, 119);
-    border: 0px;
-    height: 200px;
+.text p{
+    padding: 2% 6%;
+    padding-bottom: 4%;
+    
+    font-size: 2.5vh;
+    text-align: justify;
+    line-height: 5vh;
 }
-.vajutaja {
-    width: 20%;
-    text-align: center;
-    background-color: rgba(50, 49, 54, 0.345);
-    margin-left: 10%;
-    margin-right: 10%;
-}
-.välimine {
-    display: flex;
-    background-color: rgba(39, 40, 43, 0.137);
-    padding: 10px;
-    height: 700px;
-}
-.kohuke {
-    padding: 15px;
-    width: 90%;
-    margin: auto;
-}
-body {
-    /*background-image: url("https://api.delfi.ee/media-api-image-cropper/v1/6855a9a0-b8e8-11eb-a43e-c39d2a6aaf33.jpg?noup&w=1200&h=711");
-    background-size: 100%;*/
-    background-color: rgb(68, 69, 73);
+.right{
+    text-align: right;
+    background-color: #D8C3A5;
+    color: #605f5d;
 }
 
+.left {
+    color: #8E8D8A;
+}
+
+body{
+    background-color: #EAE7DC;
+}
