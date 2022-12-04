@@ -63,13 +63,29 @@ nav a{
 
 .pilt2{
     float: right;
-    padding-left: 6%;
-    padding-top: 2%;
+    padding: 2% 6%;
+    padding-bottom: 4%;
     margin-right: 2%;
     margin-bottom: 1%;
-    width: 550px;
+    width: 300px;
 }
 
 .left {
-    width: 40%;
+    color: #8E8D8A;
+    width: 70%;
+}
+.leftdark {
+    color: #605f5d;
+    width: 70%;
+}
+.jaotavus{
+    padding: 0%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.jaotavus2{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    background-color: #D8C3A5;
 }
