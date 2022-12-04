@@ -2,6 +2,22 @@ body{
     background-color: #EAE7DC;
 }
 
+.vasakpilt{
+    float: left;
+    padding-left: 6%;
+    padding-top: 2%;
+    margin-right: 2%;
+    margin-bottom: 1%;
+}
+
+.parempilt{
+    float: right;
+    padding-left: 2%;
+    padding-top: 2%;
+    margin-right: 6%;
+    margin-bottom: 1%;
+}
+
 nav{
     padding: 2% 4%;
     display: flex;
