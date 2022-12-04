@@ -1,9 +1,12 @@
 // Siit algab Joosepi kood (Kui lisate upgrade vms, siis pange enda nimi sinna taha)
 
-let kohukesed = 0; // Kohukeste arv 
+let kohukesed = 1000; // Kohukeste arv 
+let kohukesedHTML = kohukesed;
+let kohukesedSekundis = 0;
 function lisakohukesi(amount) {
     kohukesed = kohukesed + amount;
-    document.getElementById("kohukesed").innerHTML = kohukesed;
+    kohukesedHTML = (kohukesed).toFixed(1);
+    document.getElementById("kohukesedHTML").innerHTML = kohukesedHTML;
 }
 
 // Upgradid
@@ -13,16 +16,21 @@ let hiireupgrade = [25, ] // Hind, tootmis modifier
 
 // Automaatsed upgradid
 
-let vabrik = [25, 0, 1.15, 1, "vabrikuKogus", "vabrikuHind"]; // Hind, koguarv, hinnatõus, tootmis modifier, koguse ID, hinna ID
+let käsitööline = [20, 0, 1.1, 0.1, "käsitöölisteKogus", "käsitöölisteHind"]; // Hind, koguarv, hinnatõus, tootmis modifier, koguse ID, hinna ID
+let talu = [100, 0, 1.15, 1, "taluKogus", "taluHind"];
+let vabrik = [800, 0, 1.2, 5, "vabrikuKogus", "vabrikuHind"]; 
+
+
 
 function ostaUpgrade(upgrade) {
     if (kohukesed >= upgrade[0]) {
         kohukesed = kohukesed - upgrade[0];
+        kohukesedHTML = (kohukesed).toFixed(1);
         upgrade[0] = Math.round(upgrade[0] * upgrade[2]);
         upgrade[1] = upgrade[1] + 1;
         document.getElementById(upgrade[4]).innerHTML = upgrade[1];
         document.getElementById(upgrade[5]).innerHTML = upgrade[0];
-        document.getElementById("kohukesed").innerHTML = kohukesed;
+        document.getElementById("kohukesedHTML").innerHTML = kohukesedHTML;
     }
 }
 
@@ -47,7 +55,10 @@ function pop(pildiID, imgWidth, imgOGWidth, change) {
 
 // Tootmine
 setInterval(function() {
-    kohukesed = kohukesed + vabrik[1]*vabrik[3]; // Lisab kohukestele vabriku toodetud kohukesed
-    document.getElementById("kohukesed").innerHTML = kohukesed;
-}, 1000) // Iga 1000ms (1 sekund)
+    kohukesedSekundis = ((käsitööline[1] * käsitööline[3]) + (talu[1] * talu[3]) + (vabrik[1] * vabrik[3]))
+    kohukesed = kohukesed + kohukesedSekundis/10; // Lisab kohukestele poest ostetud asjade toodetud kohukesed
+    kohukesedHTML = (kohukesed).toFixed(1);
+    document.getElementById("kohukesedHTML").innerHTML = kohukesedHTML;
+    document.getElementById("kohukesedSekundis").innerHTML = (kohukesedSekundis).toFixed(1);
+}, 100) // Iga 100ms (0.1 sekund)
 // Siit lõppeb Joosepi kood
