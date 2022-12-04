@@ -1,0 +1,12 @@
+body{
+    background-color: #EAE7DC;
+}
+nav{
+    padding: 2% 4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav a{
+    font-size: 3vh;
+}

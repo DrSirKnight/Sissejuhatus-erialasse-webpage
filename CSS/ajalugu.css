@@ -1,13 +1,6 @@
 body{
     background-color: #EAE7DC;
 }
-.topbar{
-    background-color: #E85A4F;
-    background-size: 100% 100%;
-}
-.topbar a{
-    color: #EAE7DC;
-}
 nav{
     padding: 2% 4%;
     display: flex;
@@ -16,32 +9,6 @@ nav{
 }
 nav a{
     font-size: 3vh;
-}
-.navbar{
-    text-align: right;
-    position: relative;
-}
-.navbar ul li{
-    display:inline-block;
-    list-style: none;
-    margin-left: 3vh;
-}
-.navbar ul li a{
-    font-size: 2vh;
-    color: #EAE7DC;
-    text-decoration: none;
-}
-.navbar ul li::after{
-    content: "";
-    width: 0%;
-    height: 0.3vh;
-    background: #E98074;
-    display: block;
-    margin: auto;
-    transition: 0.5s;
-}
-.navbar ul li:hover::after{ 
-    width: 100%;
 }
 
 .pilt{

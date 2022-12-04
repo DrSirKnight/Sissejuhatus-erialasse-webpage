@@ -13,9 +13,11 @@ body{                                                       /* Helepunane - #E98
     padding-right: 6%;
     color: #E85A4F;
     font-size: 4.5vh;
-    text-decoration-line: underline;
+    text-decoration: underline;
+    text-underline-offset: 1vh;
     text-decoration-thickness: 0.8vh;
     text-decoration-color: #E98074;
+
     padding-top: 2%;
     
 }
@@ -39,4 +41,36 @@ body{                                                       /* Helepunane - #E98
 
 body{
     background-color: #EAE7DC;
+}
+
+.navbar{
+    text-align: right;
+    position: relative;
+    background-color: #E85A4F;
+    background-size: 100% 100%;
+}
+.navbar a{
+    color: #EAE7DC;
+}
+.navbar ul li{
+    display:inline-block;
+    list-style: none;
+    margin-left: 3vh;
+}
+.navbar ul li a{
+    font-size: 2vh;
+    color: #EAE7DC;
+    text-decoration: none;
+}
+.navbar ul li::after{
+    content: "";
+    width: 0%;
+    height: 0.3vh;
+    background: #E98074;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{ 
+    width: 100%;
 }
