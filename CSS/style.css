@@ -4,6 +4,7 @@
 }                                                            /* Hallikas - #8E8D8A */
 body{                                                       /* Helepunane - #E98074 */
     font-family: 'Alexandria', sans-serif;                    /* Punane - #E85A4F */
+    background-color: #EAE7DC;
 }
 .text{
     padding-top: 1%;
@@ -17,9 +18,7 @@ body{                                                       /* Helepunane - #E98
     text-underline-offset: 1vh;
     text-decoration-thickness: 0.8vh;
     text-decoration-color: #E98074;
-
     padding-top: 2%;
-    
 }
 .text p{
     padding: 2% 6%;
@@ -38,11 +37,6 @@ body{                                                       /* Helepunane - #E98
 .left {
     color: #8E8D8A;
 }
-
-body{
-    background-color: #EAE7DC;
-}
-
 .navbar{
     text-align: right;
     position: relative;
