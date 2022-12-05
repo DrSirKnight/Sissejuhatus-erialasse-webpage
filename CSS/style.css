@@ -38,8 +38,6 @@ body{                                                       /* Helepunane - #E98
 }
 
 /* Nav bar algab */
-
-/* Nav bar algab */
 .navbar{
     color: #EAE7DC;
     background-color: #E85A4F;
@@ -80,4 +78,9 @@ body{                                                       /* Helepunane - #E98
 
 /* Nav bar lõppeb */
 
-/* Nav bar lõppeb */
+.parempilt{
+    float: right;
+    padding-left: 2%;
+    margin-right: 6%;
+    height: 35vh;
+}

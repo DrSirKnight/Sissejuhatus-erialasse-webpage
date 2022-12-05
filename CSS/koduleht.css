@@ -21,14 +21,14 @@ nav a{
     margin-right: 3vh;
 }
 .links ul li a{
-    font-size: 7vh;
+    font-size: 15vh;
     color: azure;
     text-decoration: none;
 }
 .links ul li::after{
     content: " ";
     width: 0%;
-    height: 0.6vh;
+    height: 1vh;
     background: #E85A4F;
     display: block;
     margin: auto;
@@ -38,7 +38,7 @@ nav a{
     width: 100%;
 }
 .headertext {
-    margin-top: 20vh;
+    margin-top: 30vh;
     color: azure;
     text-align: center;
     margin-bottom: 10px;
@@ -47,7 +47,7 @@ nav a{
     text-align: center;
     overflow: auto;
     height: 100vh;
-    font-size: 8vh;
+    font-size: 5vh;
     height: 100vh;
     width: 100%;
     background-image:linear-gradient(rgba(142, 141, 138, 0.8),rgba(142, 141, 138, 0.8)),url(../Pildid/background1.jpeg);
@@ -68,6 +68,7 @@ nav a{
     margin-right: 2%;
     margin-bottom: 1%;
     width: 300px;
+    filter:blur(2px);
 }
 
 .left {
@@ -88,4 +89,9 @@ nav a{
     padding-top: 2%;
     padding-bottom: 2%;
     background-color: #D8C3A5;
+}
+
+.parempilt {
+    height: 30vh;
+    filter: blur(2px);
 }
