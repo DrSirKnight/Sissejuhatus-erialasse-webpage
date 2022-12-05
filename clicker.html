@@ -2,16 +2,52 @@
 <html lang="">
   <head>
     <meta charset="utf-8">
-    <title>Veebileht</title>
-    <script src="scripts.js"></script>
+    <title>Kohukese Vajutaja</title>
+    <script type="text/javascript" src="scripts.js"></script>
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <link rel="stylesheet" type="text/css" href="CSS/ajalugu.css">
+    <link rel="stylesheet" type="text/css" href="CSS/clicker.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@700&display=swap" rel="stylesheet"> 
   </head>
   <body>
+    <!--
     <header>Veebileht</header>
     <main><p>Veebileht :)</p></main>
-    <footer><p>Veebileht</p></footer>
-    <img src="https://media.voog.com/0000/0041/5494/photos/47401051_Tere_Classic_vanilli_kohuke.png" alt="Kohukesed" width="255" onclick="lisakohukesi(1)">
-    <p>Kohukesed: <span id="kohukesed">0</span></p>
-    <button onclick="ostaUpgrade(vabrik)">Kohukeste vabrik [Kokku: <span id="vabrikuKogus">0</span> Hind: <span id="vabrikuHind">10</span>]</button>
+    <footer><p>Veebileht</p></footer> 
+    -->
+    <nav class="topbar">
+      <a>Kohuclicker</a>
+      <div class="navbar">
+          <ul>
+              <li><a href="index.html">Koduleht</a></li>
+              <li><a href="ajalugu.html">Ajalugu</a></li>
+              <li><a href="clicker.html">Clicker</a></li>
+              <li><a href="">Hinnangud</a></li>
+          </ul>
+      </div>
+  </nav>
+  <div class="välimine">
+    <div class="pood">
+      <button onclick="ostaUpgrade(käsitööline)" class="poenupp">Kohukesi tootev käsitööline [Kokku: <span id="käsitöölisteKogus">0</span> Hind: <span id="käsitöölisteHind">25</span>]</button>
+      <button onclick="ostaUpgrade(talu)" class="poenupp">Kohukeste talu [Kokku: <span id="taluKogus">0</span> Hind: <span id="taluHind">100</span>]</button>
+      <button onclick="ostaUpgrade(vabrik)" class="poenupp">Kohukeste vabrik [Kokku: <span id="vabrikuKogus">0</span> Hind: <span id="vabrikuHind">800</span>]</button>
+      <button onclick="ostaUpgrade(kaevandus)" class="poenupp">Kohukeste kaevandus [Kokku: <span id="kaevanduseKogus">0</span> Hind: <span id="kaevanduseHind">12000</span>]</button>
+      <button onclick="ostaUpgrade(duplikaator)" class="poenupp">Kohukeste duplikaator [Kokku: <span id="duplikaatoriKogus">0</span> Hind: <span id="duplikaatoriHind">100000</span>]</button>
+      <button onclick="ostaUpgrade(portaal)" class="poenupp">Kohukeste portaal [Kokku: <span id="portaaliKogus">0</span> Hind: <span id="portaaliHind">1000000</span>]</button>
+      <button onclick="ostaUpgrade(nõid)" class="poenupp">Kohukeste nõid [Kokku: <span id="nõidadeKogus">0</span> Hind: <span id="nõidadeHind">25000000</span>]</button>
+      <button onclick="ostaUpgrade(planeet)" class="poenupp">Kohukeste planeet [Kokku: <span id="planeediKogus">0</span> Hind: <span id="planeediHind">1000000000</span>]</button>
+    </div>
+    <div class="vajutaja">
+      <div class="kohuke">
+        <img src="Pildid\Kohuke.png" width="58%" onclick="lisakohukesi(1)" class="clickable" id="kohuke"></img>
+      </div>
+      <div class="kohukeseInfo">
+       <p>Kohukesed: <span id="kohukesedHTML">0</span></p>
+       <p>Kohukesed sekundis: <span id="kohukesedSekundis">0</span></p>
+      </div>
+    </div>
+  </div>
   </body>
 </html>

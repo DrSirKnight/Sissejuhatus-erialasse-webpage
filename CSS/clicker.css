@@ -1,0 +1,61 @@
+button, .clickable {
+    cursor: pointer;
+}
+.pood {
+    width: 70%;
+    background-color: #E85A4F;
+    overflow: auto;
+    -ms-overflow-style: none; /* Edge */
+    scrollbar-width: none; /* Firefox */
+    padding: 1%;
+}
+.pood::-webkit-scrollbar{
+    display:none /* Chrome, Opera, jne */
+}
+.poenupp {
+    padding: 2%;
+    width: 97%;
+    margin: 1%;
+    margin-bottom: 0%;
+    background-color: #E98074;
+    border: 0px;
+    height: fit-content;
+    text-align: left;
+    font-family: 'Alexandria', sans-serif;
+    color: #EAE7DC;
+    font-size: 2.5vh;
+}
+.vajutaja {
+    width: 30%;
+    text-align: center;
+    background-color: #E85A4F;
+    margin-left: 5%;
+    padding: 1%;
+}
+.välimine {
+    display: flex;
+    height: 100%;
+    margin: 2%;
+}
+.kohuke {
+    padding: 10px;
+    margin: 10px;
+    background-color: #E98074;
+}
+
+.kohukeseInfo {
+    background-color: #E98074;
+    color: #EAE7DC;
+    font-size: 2.5vh;
+    height: 16%;
+    padding: 10px;
+    margin: 10px;
+    margin-top: 5%;
+}
+
+body {
+    height: 100%;
+}
+html{
+    height: 80%;
+}
