@@ -52,6 +52,9 @@ body{                                                       /* Helepunane - #E98
 }
 .navbar a{
     color: #EAE7DC;
+    text-decoration: none;
+    font-size: 2.5vh;
+    margin-right: 10px;
 }
 .navbar ul li{
     display:inline-block;

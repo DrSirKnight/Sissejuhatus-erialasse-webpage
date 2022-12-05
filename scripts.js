@@ -1,6 +1,6 @@
 // Siit algab Joosepi kood (Kui lisate upgrade vms, siis pange enda nimi sinna taha)
 
-let kohukesed = 1000000; // Kohukeste arv 
+let kohukesed = 0; // Kohukeste arv 
 let kohukesedSekundis = 0;
 let hiiretugevus = 1;
 if (localStorage.getItem("kohukesed") != null) {

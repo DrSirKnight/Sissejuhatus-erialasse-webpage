@@ -19,9 +19,10 @@ nav a{
     list-style: none;
     margin-left: 3vh;
     margin-right: 3vh;
+    margin-top: 10vh;
 }
 .links ul li a{
-    font-size: 15vh;
+    font-size: 8vh;
     color: azure;
     text-decoration: none;
 }
