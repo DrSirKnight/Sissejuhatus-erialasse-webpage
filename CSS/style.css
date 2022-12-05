@@ -23,7 +23,6 @@ body{                                                       /* Helepunane - #E98
 .text p{
     padding: 2% 6%;
     padding-bottom: 4%;
-    
     font-size: 2.5vh;
     text-align: justify;
     line-height: 5vh;
@@ -37,14 +36,28 @@ body{                                                       /* Helepunane - #E98
 .left {
     color: #8E8D8A;
 }
-.navbar{
-    text-align: right;
-    position: relative;
+
+/* Nav bar algab */
+
+.topbar{
     background-color: #E85A4F;
     background-size: 100% 100%;
 }
-.navbar a{
+.topbar a{
     color: #EAE7DC;
+}
+nav{
+    padding: 2% 4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav a{
+    font-size: 3vh;
+}
+.navbar{
+    text-align: right;
+    position: relative;
 }
 .navbar ul li{
     display:inline-block;
@@ -68,3 +81,5 @@ body{                                                       /* Helepunane - #E98
 .navbar ul li:hover::after{ 
     width: 100%;
 }
+
+/* Nav bar lõppeb */
