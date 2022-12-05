@@ -7,12 +7,12 @@ if (localStorage.getItem("kohukesed") != null) {
     kohukesed = parseFloat(localStorage.getItem("kohukesed")); // Laeb kohukeste arvu
 }
 
-if (localStorage.getItem("hiiretugevus") != null) {
+if (localStorage.getItem("hiiretugevus") != null) { // Laeb hiiretugevuse
     hiiretugevus = parseFloat(localStorage.getItem("hiiretugevus"));
 }
 let kohukesedHTML = kohukesed;
 
-function lisakohukesi(amount) {
+function lisakohukesi(amount) { // Lisab kohukesi
     kohukesed = kohukesed + amount;
     kohukesedHTML = (kohukesed).toFixed(1);
     document.getElementById("kohukesedHTML").innerHTML = kohukesedHTML;
@@ -49,11 +49,12 @@ function ostaUpgradeHiirel(upgrade) { // Upgradide ostmise funktsioon
         upgrade[0] = Math.round(upgrade[0] * upgrade[2]); // Tõstab hinda
         upgrade[1] = upgrade[1] + 1; // Tõstab koguarvu
         hiiretugevus += upgrade[3]; // Tõstab hiiretugevust
-        updateUpgrade(upgrade);
+        updateUpgrade(upgrade); // Uuendab upgradi väärtusi HTMLis
         localStorage.setItem("hiiretugevus",hiiretugevus);
         localStorage.setItem(upgrade[6],upgrade[0].toString() + "," + upgrade[1].toString());
     }
 }
+
 // Automaatsed upgradid
 
 let käsitööline = [20, 0, 1.1, 0.1, "käsitöölisteKogus", "käsitöölisteHind", "käsitööline"]; // Hind, koguarv, hinnatõus, tootmis modifier, koguse ID, hinna ID, muutuja nimi
@@ -101,9 +102,9 @@ if (localStorage.getItem("planeet") != null) {
 }
 
 
-updateTehtud = true
+updateTehtud = true // Hiljem kasutatakse, et vältida korduvaid uuendusi
 
-function updateiUpgradid() {
+function updateiUpgradid() { // Uuendab upgradide väärtusi HTMLis
     updateUpgrade(hiir);
     updateUpgrade(hiir2);
     updateUpgrade(käsitööline);
@@ -123,21 +124,21 @@ function ostaUpgrade(upgrade) { // Upgradide ostmise funktsioon
         kohukesedHTML = (kohukesed).toFixed(1); // Ümardab kohukesed
         upgrade[0] = Math.round(upgrade[0] * upgrade[2]); // Tõstab hinda
         upgrade[1] = upgrade[1] + 1; // Tõstab koguarvu
-        updateUpgrade(upgrade);
-        localStorage.setItem(upgrade[6],upgrade);
+        updateUpgrade(upgrade); // Uuendab upgradi väärtusi HTMLis
+        localStorage.setItem(upgrade[6],upgrade[0].toString() + "," + upgrade[1].toString());
     }
 }
 
 // Tootmine
-setInterval(function() {
+setInterval(function() { // Uuendab lehe laadimisel upgradi väärtused HTMLis
     if (updateTehtud == true) {
         updateiUpgradid();
     }
-    kohukesedSekundis = ((käsitööline[1] * käsitööline[3]) + (talu[1] * talu[3]) + (vabrik[1] * vabrik[3]) + (kaevandus[1] * kaevandus[3]) + (duplikaator[1] * duplikaator[3]) + (portaal[1] * portaal[3]) + (nõid[1] * nõid[3]) + (planeet[1] * planeet[3]));
+    kohukesedSekundis = ((käsitööline[1] * käsitööline[3]) + (talu[1] * talu[3]) + (vabrik[1] * vabrik[3]) + (kaevandus[1] * kaevandus[3]) + (duplikaator[1] * duplikaator[3]) + (portaal[1] * portaal[3]) + (nõid[1] * nõid[3]) + (planeet[1] * planeet[3])); // Lisab kohukestele iga upgradei toodetud kohukesed
     kohukesed = kohukesed + kohukesedSekundis/10; // Lisab kohukestele poest ostetud asjade toodetud kohukesed
-    kohukesedHTML = (kohukesed).toFixed(1);
-    localStorage.setItem("kohukesed",kohukesed)
-    document.getElementById("kohukesedHTML").innerHTML = kohukesedHTML;
+    kohukesedHTML = (kohukesed).toFixed(1); // Ümardab kohukesed
+    localStorage.setItem("kohukesed",kohukesed) // Salvestab kohukesed
+    document.getElementById("kohukesedHTML").innerHTML = kohukesedHTML; // Uuendab infot HTMLis
     document.getElementById("kohukesedSekundis").innerHTML = (kohukesedSekundis).toFixed(1);
     document.getElementById("hiireTugevus").innerHTML = (hiiretugevus).toFixed(1);
 }, 100) // Iga 100ms (0.1 sekund)
