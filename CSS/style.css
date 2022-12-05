@@ -39,25 +39,21 @@ body{                                                       /* Helepunane - #E98
 
 /* Nav bar algab */
 
-.topbar{
+/* Nav bar algab */
+.navbar{
+    color: #EAE7DC;
     background-color: #E85A4F;
     background-size: 100% 100%;
-}
-.topbar a{
-    color: #EAE7DC;
-}
-nav{
+    font-size: 3vh;
     padding: 2% 4%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-nav a{
-    font-size: 3vh;
-}
-.navbar{
     text-align: right;
     position: relative;
+}
+.navbar a{
+    color: #EAE7DC;
 }
 .navbar ul li{
     display:inline-block;
@@ -81,5 +77,7 @@ nav a{
 .navbar ul li:hover::after{ 
     width: 100%;
 }
+
+/* Nav bar lõppeb */
 
 /* Nav bar lõppeb */
