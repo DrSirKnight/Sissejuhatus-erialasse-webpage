@@ -18,10 +18,12 @@ let hiireupgrade = [25, ] // Hind, tootmis modifier
 
 let käsitööline = [20, 0, 1.1, 0.1, "käsitöölisteKogus", "käsitöölisteHind"]; // Hind, koguarv, hinnatõus, tootmis modifier, koguse ID, hinna ID
 let talu = [100, 0, 1.15, 1, "taluKogus", "taluHind"];
-let vabrik = [800, 0, 1.2, 5, "vabrikuKogus", "vabrikuHind"]; 
-
-
-
+let vabrik = [800, 0, 1.2, 5, "vabrikuKogus", "vabrikuHind"];
+let kaevandus = [12000, 0, 1.2, 50, "kaevanduseKogus", "kaevanduseHind"];
+let duplikaator = [100000, 0, 1.2, 250, "duplikaatoriKogus", "duplikaatoriHind"];
+let portaal = [1000000, 0, 1.2, 1500, "portaaliKogus", "portaaliHind"]; 
+let nõid = [25000000, 0, 1.2, 10000, "nõidadeKogus", "nõidadeHind"];
+let planeet = [100000000, 0, 1.2, 100000, "planeediKogus", "planeediHind"];
 function ostaUpgrade(upgrade) {
     if (kohukesed >= upgrade[0]) {
         kohukesed = kohukesed - upgrade[0];
