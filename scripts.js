@@ -3,6 +3,7 @@
 let kohukesed = 1000; // Kohukeste arv 
 let kohukesedHTML = kohukesed;
 let kohukesedSekundis = 0;
+let hiiretugevus = 1;
 function lisakohukesi(amount) {
     kohukesed = kohukesed + amount;
     kohukesedHTML = (kohukesed).toFixed(1);
@@ -12,7 +13,22 @@ function lisakohukesi(amount) {
 // Upgradid
 
 // Clickimisega seotud upgradid
-let hiireupgrade = [25, ] // Hind, tootmis modifier 
+let hiir = [25, 0, 1.2, 0.5, "hiireKogus", "hiireHind"]; // Hind, koguarv, hinnatõus, tootmis modifier, koguse ID, hinna ID
+let hiir2 = [500, 0, 1.2, 5, "hiireKogus2", "hiireHind2"]; // Hind, koguarv, hinnatõus, tootmis modifier, koguse ID, hinna ID
+
+
+function ostaUpgradeHiirel(upgrade) { // Upgradide ostmise funktsioon
+    if (kohukesed >= upgrade[0]) { // Kas on küllalt kohukesi?
+        kohukesed = kohukesed - upgrade[0]; // Lahutab kohukesed
+        kohukesedHTML = (kohukesed).toFixed(1); // Ümardab kohukesed
+        upgrade[0] = Math.round(upgrade[0] * upgrade[2]); // Tõstab hinda
+        upgrade[1] = upgrade[1] + 1; // Tõstab koguarvu
+        hiiretugevus += upgrade[3]; // Tõstab hiiretugevust
+        document.getElementById(upgrade[4]).innerHTML = upgrade[1]; // Muudab koguse HTMLis
+        document.getElementById(upgrade[5]).innerHTML = upgrade[0]; // Muudab hinda HTMLis
+        document.getElementById("kohukesedHTML").innerHTML = kohukesedHTML; // Muudab kohukeste arvu HTMLi
+    }
+}
 
 // Automaatsed upgradid
 
@@ -24,15 +40,16 @@ let duplikaator = [100000, 0, 1.2, 250, "duplikaatoriKogus", "duplikaatoriHind"]
 let portaal = [1000000, 0, 1.2, 1500, "portaaliKogus", "portaaliHind"]; 
 let nõid = [25000000, 0, 1.2, 10000, "nõidadeKogus", "nõidadeHind"];
 let planeet = [100000000, 0, 1.2, 100000, "planeediKogus", "planeediHind"];
-function ostaUpgrade(upgrade) {
-    if (kohukesed >= upgrade[0]) {
-        kohukesed = kohukesed - upgrade[0];
-        kohukesedHTML = (kohukesed).toFixed(1);
-        upgrade[0] = Math.round(upgrade[0] * upgrade[2]);
-        upgrade[1] = upgrade[1] + 1;
-        document.getElementById(upgrade[4]).innerHTML = upgrade[1];
-        document.getElementById(upgrade[5]).innerHTML = upgrade[0];
-        document.getElementById("kohukesedHTML").innerHTML = kohukesedHTML;
+
+function ostaUpgrade(upgrade) { // Upgradide ostmise funktsioon
+    if (kohukesed >= upgrade[0]) { // Kas on küllalt kohukesi?
+        kohukesed = kohukesed - upgrade[0]; // Lahutab kohukesed
+        kohukesedHTML = (kohukesed).toFixed(1); // Ümardab kohukesed
+        upgrade[0] = Math.round(upgrade[0] * upgrade[2]); // Tõstab hinda
+        upgrade[1] = upgrade[1] + 1; // Tõstab koguarvu
+        document.getElementById(upgrade[4]).innerHTML = upgrade[1]; // Muudab koguse HTMLis
+        document.getElementById(upgrade[5]).innerHTML = upgrade[0]; // Muudab hinda HTMLis
+        document.getElementById("kohukesedHTML").innerHTML = kohukesedHTML; // Muudab kohukeste arvu HTMLi
     }
 }
 
@@ -57,10 +74,11 @@ function pop(pildiID, imgWidth, imgOGWidth, change) {
 
 // Tootmine
 setInterval(function() {
-    kohukesedSekundis = ((käsitööline[1] * käsitööline[3]) + (talu[1] * talu[3]) + (vabrik[1] * vabrik[3]))
+    kohukesedSekundis = ((käsitööline[1] * käsitööline[3]) + (talu[1] * talu[3]) + (vabrik[1] * vabrik[3]) + (kaevandus[1] * kaevandus[3]) + (duplikaator[1] * duplikaator[3]) + (portaal[1] * portaal[3]) + (nõid[1] * nõid[3]) + (planeet[1] * planeet[3]));
     kohukesed = kohukesed + kohukesedSekundis/10; // Lisab kohukestele poest ostetud asjade toodetud kohukesed
     kohukesedHTML = (kohukesed).toFixed(1);
     document.getElementById("kohukesedHTML").innerHTML = kohukesedHTML;
     document.getElementById("kohukesedSekundis").innerHTML = (kohukesedSekundis).toFixed(1);
+    document.getElementById("hiireTugevus").innerHTML = (hiiretugevus).toFixed(1);
 }, 100) // Iga 100ms (0.1 sekund)
 // Siit lõppeb Joosepi kood

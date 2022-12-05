@@ -29,22 +29,25 @@
   </nav>
   <div class="välimine">
     <div class="pood">
-      <button onclick="ostaUpgrade(käsitööline)" class="poenupp">Kohukesi tootev käsitööline [Kokku: <span id="käsitöölisteKogus">0</span> Hind: <span id="käsitöölisteHind">25</span>]</button>
-      <button onclick="ostaUpgrade(talu)" class="poenupp">Kohukeste talu [Kokku: <span id="taluKogus">0</span> Hind: <span id="taluHind">100</span>]</button>
-      <button onclick="ostaUpgrade(vabrik)" class="poenupp">Kohukeste vabrik [Kokku: <span id="vabrikuKogus">0</span> Hind: <span id="vabrikuHind">800</span>]</button>
-      <button onclick="ostaUpgrade(kaevandus)" class="poenupp">Kohukeste kaevandus [Kokku: <span id="kaevanduseKogus">0</span> Hind: <span id="kaevanduseHind">12000</span>]</button>
-      <button onclick="ostaUpgrade(duplikaator)" class="poenupp">Kohukeste duplikaator [Kokku: <span id="duplikaatoriKogus">0</span> Hind: <span id="duplikaatoriHind">100000</span>]</button>
-      <button onclick="ostaUpgrade(portaal)" class="poenupp">Kohukeste portaal [Kokku: <span id="portaaliKogus">0</span> Hind: <span id="portaaliHind">1000000</span>]</button>
-      <button onclick="ostaUpgrade(nõid)" class="poenupp">Kohukeste nõid [Kokku: <span id="nõidadeKogus">0</span> Hind: <span id="nõidadeHind">25000000</span>]</button>
-      <button onclick="ostaUpgrade(planeet)" class="poenupp">Kohukeste planeet [Kokku: <span id="planeediKogus">0</span> Hind: <span id="planeediHind">1000000000</span>]</button>
+      <button onclick="ostaUpgradeHiirel(hiir)" class="poenupp">Odavam retsept [Kokku: <span id="hiireKogus">0</span> Hind: <span id="hiireHind">25</span>] <br/> Teeme odavama retsepti, mis laseb meil kiiremini kohukesi toota.</button>
+      <button onclick="ostaUpgrade(käsitööline)" class="poenupp">Kohukesi tootev käsitööline [Kokku: <span id="käsitöölisteKogus">0</span> Hind: <span id="käsitöölisteHind">20</span>] <br/> Palkame käsitöölised, kes toodavad kohukesi meie eest.</button>
+      <button onclick="ostaUpgrade(talu)" class="poenupp">Kohukeste talu [Kokku: <span id="taluKogus">0</span> Hind: <span id="taluHind">100</span>] <br/> Maksame talule, et nad toodaksid meile kohukesi.</button>
+      <button onclick="ostaUpgradeHiirel(hiir2)" class="poenupp">Kohukeste tootmise masin [Kokku: <span id="hiireKogus2">0</span> Hind: <span id="hiireHind2">500</span>] <br/> Ostame masina, mis laseb mitu kohukest korraga teha.</button>
+      <button onclick="ostaUpgrade(vabrik)" class="poenupp">Kohukeste vabrik [Kokku: <span id="vabrikuKogus">0</span> Hind: <span id="vabrikuHind">800</span>] <br/> Maksame vabrikule, et nad toodaksid ainult kohukesi.</button>
+      <button onclick="ostaUpgrade(kaevandus)" class="poenupp">Kohukeste kaevandus [Kokku: <span id="kaevanduseKogus">0</span> Hind: <span id="kaevanduseHind">12000</span>] <br/> Ostame välja kaevanduse, kus saame maa alt kohukesi kaevata.</button>
+      <button onclick="ostaUpgrade(duplikaator)" class="poenupp">Kohukeste duplikaator [Kokku: <span id="duplikaatoriKogus">0</span> Hind: <span id="duplikaatoriHind">100000</span>] <br/> Ehitame duplikaatori, et luua ühest kohukesest mitu identsed kohukest.</button>
+      <button onclick="ostaUpgrade(portaal)" class="poenupp">Kohukeste portaal [Kokku: <span id="portaaliKogus">0</span> Hind: <span id="portaaliHind">1000000</span>] <br/> Ehitame portaali, kust tuleb lõpmatu arv kohukesi välja.</button>
+      <button onclick="ostaUpgrade(nõid)" class="poenupp">Kohukeste nõid [Kokku: <span id="nõidadeKogus">0</span> Hind: <span id="nõidadeHind">25000000</span>] <br/> Palkame nõia, kes loob maagiaga kohukesi.</button>
+      <button onclick="ostaUpgrade(planeet)" class="poenupp">Kohukeste planeet [Kokku: <span id="planeediKogus">0</span> Hind: <span id="planeediHind">1000000000</span>] <br/> Ehitame raketti ja lendame kohukese planeedile, kust toome pärast kohukesi tagasi Eestisse.</button>
     </div>
     <div class="vajutaja">
       <div class="kohuke">
-        <img src="Pildid\Kohuke.png" width="58%" onclick="lisakohukesi(1)" class="clickable" id="kohuke"></img>
+        <img src="Pildid\Kohuke.png" width="58%" onclick="lisakohukesi(hiiretugevus)" class="clickable" id="kohuke"></img>
       </div>
       <div class="kohukeseInfo">
        <p>Kohukesed: <span id="kohukesedHTML">0</span></p>
        <p>Kohukesed sekundis: <span id="kohukesedSekundis">0</span></p>
+       <p>Hiire tugevus: <span id="hiireTugevus">1</span></p>
       </div>
     </div>
   </div>
